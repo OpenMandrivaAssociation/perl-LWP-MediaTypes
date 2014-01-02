@@ -1,14 +1,14 @@
 %define modname	LWP-MediaTypes
-%define modver	6.01
+%define modver 6.02
 
 Summary:	Media types and mailcap processing
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/LWP/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/LWP/LWP-MediaTypes-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -40,4 +40,5 @@ The following functions are exported by default:
 %doc Changes META.yml README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 
