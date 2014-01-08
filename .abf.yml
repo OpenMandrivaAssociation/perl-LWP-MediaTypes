@@ -1,2 +1,4 @@
+removed_sources:
+  LWP-MediaTypes-6.01.tar.gz: b794d54a4f8c36ee51b28987bfc1abc33be5561d
 sources:
-  "LWP-MediaTypes-6.01.tar.gz": b794d54a4f8c36ee51b28987bfc1abc33be5561d
+  LWP-MediaTypes-6.02.tar.gz: f56891f4e718a5f1f16f09ae37d32e454095cbed
