@@ -11,6 +11,7 @@ Source0:	https://www.cpan.org/modules/by-module/LWP/LWP-MediaTypes-%{version}.ta
 BuildArch:	noarch
 BuildRequires:	perl(Test)
 BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test::Fatal)
 BuildRequires:	perl-devel
 BuildRequires:	make
 
