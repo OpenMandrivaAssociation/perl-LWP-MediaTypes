@@ -1,17 +1,17 @@
 %define modname	LWP-MediaTypes
-%define modver 6.02
 
 Summary:	Media types and mailcap processing
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	11
+Version:	6.04
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/LWP/LWP-MediaTypes-%{modver}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/LWP/LWP-MediaTypes-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
+BuildRequires:	make
 
 %description
 This module provides functions for handling media (also known as MIME)
@@ -25,21 +25,19 @@ The following functions are exported by default:
 * guess_media_type( $filename )
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes META.yml README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
-
